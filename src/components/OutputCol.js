@@ -12,7 +12,7 @@ export default function OutputCol() {
     const storeInput = useSelector(state => state.input.value)
     
     // local state holds select value
-    const [ select, setSelect ] = useState("AsciiDoc");
+    const [ select, setSelect ] = useState("Markdown");
 
     const html = select === "AsciiDoc" ?
         <div dangerouslySetInnerHTML={{ __html: asciidoctor.convert(storeInput) }}></div> :
