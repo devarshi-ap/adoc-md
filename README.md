@@ -19,3 +19,5 @@ npm start
 Note: npm start covers scripts for both react & express server (see 'start' script in package.json)
 
 3. BOOM BABY, the react frontend is likely live on port 3000, and the express server on 3001.
+
+![](https://github.com/devarshi-ap/adoc-md/blob/main/public/instruction.gif)
