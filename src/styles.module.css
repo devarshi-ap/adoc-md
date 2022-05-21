@@ -1,0 +1,35 @@
+@import url(https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap);
+.Landing {
+  margin: 2rem 1rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.Landing .title, .Landing .subtitle, .Landing .description, .Landing .warning {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: black;
+  text-align: center;
+}
+
+.Landing .title {
+  font-size: 3rem;
+}
+
+.Landing .subtitle {
+  font-size: 1.1rem;
+  color: #515151;
+}
+
+.Landing .description {
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  color: #4c4c4c;
+}
+
+.Landing .warning {
+  font-size: 0.75rem;
+  margin-top: 0;
+  color: #640808;
+}
+/*# sourceMappingURL=styles.module.css.map */

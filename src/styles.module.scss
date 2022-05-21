@@ -1,0 +1,33 @@
+@import url(https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap);
+
+.Landing {
+    margin: 2rem 1rem;
+    width: fit-content;
+
+    .title, .subtitle, .description, .warning {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        color: black;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+    
+    .subtitle {
+        font-size: 1.1rem;
+        color: rgb(81, 81, 81);
+    }
+    
+    .description {
+        font-size: 1rem;
+        margin-top: 1.5rem;
+        color: rgb(76, 76, 76);
+    }
+
+    .warning {
+        font-size: 0.75rem;
+        margin-top: 0;
+        color: rgb(100, 8, 8);
+    }
+}
