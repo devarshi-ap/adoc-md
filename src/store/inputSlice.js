@@ -15,18 +15,14 @@ export const inputSlice = createSlice({
   name: 'input',
   initialState: {
     value: '',
-    in: 'AsciiDoc',
-    out: 'AsciiDoc',
+    inType: 'AsciiDoc',
   },
   reducers: {
     updateValue: (state, action) => {
         state.value = action.payload.value;
     },
-    updateIn: (state, action) => {
-        state.in = action.payload.in;
-    },
-    updateOut: (state, action) => {
-        state.out = action.payload.out;
+    updateInputType: (state, action) => {
+        state.inType = action.payload.inType;
     },
     reset: (state) => {
         state.value = '';
@@ -35,5 +31,5 @@ export const inputSlice = createSlice({
 });
 
 // each case under reducers becomes an action
-export const { updateValue, updateIn, updateOut, reset } = inputSlice.actions;
+export const { updateValue, updateInputType, reset } = inputSlice.actions;
 export default inputSlice.reducer;

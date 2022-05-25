@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { updateValue } from '../store/inputSlice';
+import { updateValue, updateInputType } from '../store/inputSlice';
 import TextareaAutosize from 'react-textarea-autosize';
 
 export default function InputCol() {
@@ -11,13 +11,22 @@ export default function InputCol() {
     // state for input from textarea
     const [inputValue, setInputValue] = useState('');
 
-    // updates state of textarea input on change
+    // local state holds select value
+    const [ select, setSelect ] = useState("AsciiDoc");
+
+    // UPDATES input type in store
+    const handleSelectChange = (event) => {
+        dispatch(updateInputType({ inType: event.target.value }));
+        setSelect(event.target.value);
+    }
+
+    // UPDATES textarea input field
     const handleChange = (event) => {
         dispatch(updateValue({ value: event.target.value }));
         setInputValue(event.target.value);
     };
 
-    // clears state of textarea input of change
+    // CLEARS textarea input field
     const handleReset = () => {
         setInputValue('');
         dispatch(updateValue({ value: '' }));
@@ -26,6 +35,14 @@ export default function InputCol() {
     return (
         <div className="column input-col frosted">
             <form>
+
+                <div className="select is-small is-fullwidth">
+                    <select value={select} onChange={handleSelectChange}>
+                        <option>AsciiDoc</option>
+                        <option>Markdown</option>
+                    </select>
+                </div>
+
                 <div className="control">
                     <TextareaAutosize
                         className="textarea"
