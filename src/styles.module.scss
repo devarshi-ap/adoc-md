@@ -4,7 +4,7 @@
     margin: 2rem 1rem;
     width: fit-content;
 
-    .title, .subtitle, .description, .warning {
+    .title, .subtitle, .description {
         font-family: 'Plus Jakarta Sans', sans-serif;
         color: black;
         text-align: center;
@@ -23,11 +23,5 @@
         font-size: 1rem;
         margin-top: 1.5rem;
         color: rgb(76, 76, 76);
-    }
-
-    .warning {
-        font-size: 0.75rem;
-        margin-top: 0;
-        color: rgb(100, 8, 8);
     }
 }
